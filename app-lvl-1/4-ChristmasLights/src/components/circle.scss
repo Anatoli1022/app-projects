@@ -1,0 +1,68 @@
+.circle {
+  &:nth-child(4n + 1) {
+    animation: circleRed infinite;
+    @keyframes circleRed {
+      0% {
+        box-shadow: none;
+      }
+
+      50% {
+        box-shadow: 0 0 10px 5px #c0392b;
+      }
+
+      100% {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &:nth-child(4n + 2) {
+    animation: circleYellow infinite;
+    @keyframes circleYellow {
+      0% {
+        box-shadow: 0 0 10px 5px #f1c40f;
+      }
+
+      50% {
+        box-shadow: none;
+      }
+
+      100% {
+        box-shadow: 0 0 10px 5px #f1c40f;
+      }
+    }
+  }
+  &:nth-child(4n + 3) {
+    animation: circleBlue infinite;
+    @keyframes circleBlue {
+      0% {
+        box-shadow: none;
+      }
+
+      50% {
+        box-shadow: 0 0 10px 5px #74f7e1;
+      }
+
+      100% {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &:nth-child(4n + 4) {
+    animation: circleGreen infinite;
+    @keyframes circleGreen {
+      0% {
+        box-shadow: 0 0 10px 5px #2ecc71;
+      }
+
+      50% {
+        box-shadow: none;
+      }
+
+      100% {
+        box-shadow: 0 0 10px 5px #2ecc71;
+      }
+    }
+  }
+}
