@@ -1,0 +1,27 @@
+:root{
+  --color: #ffb302d7;
+   --position:0;
+   --radius:0:
+}
+.scroll {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.box {
+  transform: translateX(var(--position));
+  background: var(--color);
+  border-radius: var(--radius);
+  width: 100px;
+  height: 100px;
+
+  transition: width 2s;
+}
+
+
+.error {
+  background-color: var(--error-bg-color);
+  border: 1px solid var(--error-border-color);
+  color: var(--error-text-color);
+  font-size: var(--error-text-size);
+}
