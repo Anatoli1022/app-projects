@@ -45,16 +45,16 @@ function Card() {
       {data.map((item, index) => {
         return (
           <li
-            className="bg-white dark:bg-gray-800 m-4 rounded-lg shadow-2xl  md:w-1/1 lg:w-1/2  "
+            className="bg-white dark:bg-gray-800 m-4 rounded-lg shadow-2xl  md:w-1/3 lg:w-1/3  "
             onClick={() => handleItemClick(index)}
           >
             <img
               src={item.image}
               alt="Post"
-              className="rounded-t-lg cursor-pointer "
+              className="rounded-t-lg cursor-pointer image"
             />
             {openIndex === index && (
-              <>
+              <div className="wrapper dark:bg-gray-800  bg-white">
                 <div className="px-4 pt-2">
                   <h1 className="font-bold mt-2 text-2xl text-gray-800 dark:text-gray-300 capitalize">
                     {item.title}
@@ -91,7 +91,7 @@ function Card() {
                     #darkmode
                   </span>
                 </div>
-              </>
+              </div>
             )}
           </li>
         );
