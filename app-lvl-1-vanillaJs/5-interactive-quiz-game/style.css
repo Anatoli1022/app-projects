@@ -1,0 +1,27 @@
+h1 {
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+ol {
+  display: flex;
+  margin-top: 30px;
+  column-gap: 30px;
+  margin-bottom: 0;
+}
+
+li {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 0.3s;
+  border: 1px solid white;
+}
+
+li:hover {
+  border: 1px solid black;
+}
