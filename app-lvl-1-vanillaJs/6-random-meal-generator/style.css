@@ -1,0 +1,110 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.first-content {
+  text-align: center;
+}
+
+.welcome-text {
+  margin-top: 10px;
+}
+
+.button-random {
+  margin-top: 20px;
+  background-color: #eee;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  width: 10em;
+  border-radius: 1rem;
+  color: rgb(6, 16, 2);
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+}
+
+.button-random:active {
+  color: white;
+  box-shadow: 0 0.2rem #dfd9d9;
+  transform: translateY(0.2rem);
+}
+
+.button-random:hover:not(:disabled) {
+  background: lightcoral;
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+}
+
+.button-random:disabled {
+  cursor: auto;
+  color: grey;
+}
+
+.main {
+  margin-top: 40px;
+}
+
+.content {
+  display: flex;
+  column-gap: 40px;
+}
+
+.image {
+  max-width: 500px;
+}
+
+span{
+  display: block;
+  margin-top: 10px;
+}
+
+.ingredients-block{
+  margin-top: 20px;
+}
+
+
+li{
+  margin-top: 10px;
+
+}
+
+.text-instruction{
+  margin-top: 20px;
+}
+
+h4{
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.video-block{
+  margin-top: 20px;
+}
+
+iframe{
+  width: 100%;
+  min-height: 700px;
+}
