@@ -1,0 +1,65 @@
+.card {
+  position: relative;
+  max-width: 200px;
+}
+
+.image {
+  max-width: 200px;
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 6px;
+}
+
+.cover {
+  transform: rotateY(0deg);
+  transition: 0.6s;
+}
+
+.cover-flipped {
+  transform: rotateY(90deg);
+  transition: 0.6s;
+}
+
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(90deg);
+  animation-delay: 0.6s;
+  transition: 0.6s;
+}
+
+.flipped {
+  animation-delay: 0.6s;
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+// .card {
+//   position: relative;
+// }
+
+// .image {
+//   width: 100%;
+//   display: block;
+//   border: 2px solid #fff;
+//   border-radius: 6px;
+// }
+// .card .front {
+//   position: absolute;
+//   transform: rotateY(90deg);
+//   transition: all ease-in 0.2s;
+// }
+
+// .flipped .front {
+//   transition-delay: 0.2s;
+//   transform: rotateY(0deg);
+// }
+
+// .card .back {
+//   transition: all ease-in 0.2s;
+//   transition-delay: 0.2s;
+// }
+// .flipped .back {
+//   transform: rotateY(90deg);
+//   transition-delay: 0s;
+// }
