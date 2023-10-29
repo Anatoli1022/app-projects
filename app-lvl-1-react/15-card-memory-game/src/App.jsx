@@ -12,15 +12,14 @@ function App() {
   const [choiseOne, setChoiseOne] = useState(null);
   const [choiseTwo, setChoiseTwo] = useState(null);
   const [disabled, setDisables] = useState(false);
-  const [lvl, setLvl] = useState(4);
 
   const handleClick = (e) => {
-    setLvl(e.target.value);
+    const lvl = e.target.value;
     console.log(e.target.value);
-    shuffleCards();
+    shuffleCards(lvl);
   };
 
-  const shuffleCards = () => {
+  function shuffleCards(lvl) {
     const shufflesData = data.sort(() => Math.random() - 0.5);
     const shuffleCards = [
       ...shufflesData.slice(0, lvl),
@@ -32,11 +31,7 @@ function App() {
     setTurns(0);
     setChoiseOne(null);
     setChoiseTwo(null);
-  };
-
-  // useEffect(() => {
-  //   shuffleCards();
-  // }, []);
+  }
 
   const handleChoise = (card) => {
     !choiseOne ? setChoiseOne(card) : setChoiseTwo(card);
@@ -107,7 +102,9 @@ function App() {
           );
         })}
       </div>
-      <span className={cx('turns')}>Turns: <span className={cx('turns-number')}>{turns}</span></span>
+      <span className={cx('turns')}>
+        Turns: <span className={cx('turns-number')}>{turns}</span>
+      </span>
     </div>
   );
 }
