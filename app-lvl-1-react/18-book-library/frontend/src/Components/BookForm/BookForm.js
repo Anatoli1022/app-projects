@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../../redux/books/actionCreators';
+import axios from 'axios';
+import { addBook, fetchBook } from '../../redux/slices/booksSlices';
+import createBookWithID from '../../utils/createBookWithID';
+import booksData from '../../data/books.json';
 import './BookForm.css';
 
 const BookForm = () => {
@@ -8,14 +11,20 @@ const BookForm = () => {
   const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
 
+  const handleAddRandomBook = () => {
+    const rand = Math.floor(Math.random() * booksData.length);
+    dispatch(addBook(createBookWithID(booksData[rand], 'random')));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (title && author) {
-      dispatch(addBook({ title, author }));
+      dispatch(addBook(createBookWithID({ title, author }, 'manual')));
       // const book = {
       //   title,
       //   author,
+      // id: uuidv4()
       // };
 
       // dispatch(addBook(book));
@@ -23,6 +32,11 @@ const BookForm = () => {
       setAuthor('');
     }
   };
+
+  const addRandomAddBookVuaApi = () => {
+    dispatch(fetchBook());
+  };
+
   return (
     <div className="app-block book-form">
       <h2>Add a new book </h2>
@@ -46,6 +60,12 @@ const BookForm = () => {
           ></input>
         </div>
         <button type="submit">Add Book</button>
+        <button type="button" onClick={handleAddRandomBook}>
+          Add Random
+        </button>{' '}
+        <button type="button" onClick={addRandomAddBookVuaApi}>
+          Add Random via Api
+        </button>
       </form>
     </div>
   );

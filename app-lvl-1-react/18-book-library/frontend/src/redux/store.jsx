@@ -1,10 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import bookReducer from './books/reducer';
+import bookReducer from './slices/booksSlices';
+import filterReducer from './slices/filterSlices';
 
 const store = configureStore({
   reducer: {
     books: bookReducer,
-    
+    filter: filterReducer,
   },
 });
 
