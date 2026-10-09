@@ -47,8 +47,12 @@ function calculateAll() {
 
 <template>
   <div>
-    <input type="number" v-model="info.peopleCount" />
-    <input type="number" v-model="info.price" />
+    <input
+      type="number"
+      v-model="info.peopleCount"
+      placeholder="count people"
+    />
+    <input type="number" v-model="info.price" placeholder="price" />
     <input type="number" v-model="info.tips" placeholder="tips procent" />
     <button @click="calculateAll()">button</button>
 
